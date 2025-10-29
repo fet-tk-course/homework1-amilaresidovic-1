@@ -3,7 +3,8 @@ interface Osoba{
     fun getZemlja():String
 }
 
-open class Programer(val ime:String,val prezime:String,val godineIskustva:Int,val oznakaZemlje:String,val programskiJezici:List<String>):Osoba{
+open class Programer(val ime:String,val prezime:String,val godineIskustva:Int,val oznakaZemlje:String,
+                     val programskiJezici:List<String>):Osoba{
     init{
         if(ime.isEmpty()){
             throw Exception("Ime ne smije biti prazno")
@@ -25,3 +26,11 @@ open class Programer(val ime:String,val prezime:String,val godineIskustva:Int,va
         return oznakaZemlje
     }
 }
+
+class BackendDeveloper(ime:String,prezime:String,godineIskustva: Int,oznakaZemlje: String,
+   programskiJezici: List<String>,val backendFramework:String ):Programer(ime,prezime,godineIskustva, oznakaZemlje,programskiJezici)
+
+class FrontendDeveloper(ime: String,prezime: String,godineIskustva: Int,oznakaZemlje: String,
+    programskiJezici: List<String>,val frontendFramework:String):Programer(ime,prezime,godineIskustva,oznakaZemlje,programskiJezici)
+
+
