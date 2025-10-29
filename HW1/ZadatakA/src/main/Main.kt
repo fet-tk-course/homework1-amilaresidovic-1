@@ -34,3 +34,17 @@ class FrontendDeveloper(ime: String,prezime: String,godineIskustva: Int,oznakaZe
     programskiJezici: List<String>,val frontendFramework:String):Programer(ime,prezime,godineIskustva,oznakaZemlje,programskiJezici)
 
 
+fun analizaJezikaVerzija1(programeri:List<Programer>):Map<String,Int>{
+    return programeri.flatMap{it.jezici}.groupingBy {it}.eachCount()
+}
+fun analizaJezikaVerzija2(programeri: List<Programer>):Map<String,Int> {
+    val mapa = mutableMapOf<String, Int>()
+    for(i in programeri){
+        for(j in i.jezici){
+            mapa[j]=mapa.getOrDefault(j,0)+1
+        }
+    }
+    return mapa
+}
+
+
