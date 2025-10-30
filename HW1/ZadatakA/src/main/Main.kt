@@ -48,7 +48,7 @@ fun analizaJezikaVerzija2(programeri: List<Programer>):Map<String,Int> {
     return mapa
 }
 
-//Za prosjecnoIskustvoVerzija1 sam koristila Chat GPT kako bih vidjela na koji nacin kreirati
+//Za prosjecnoIskustvoVerzija1 sam koristila ChatGPT kako bih vidjela na koji nacin kreirati
 // podatke kao parove i kako koristiti mapValues za izracun prosjeka
 
 fun prosjecnoIskustvoVerzija1(programeri:List<Programer>):Map<String,Double>{
@@ -106,7 +106,77 @@ fun ispis(programer:Programer):String{
         return "Nepoznato"
     }
 }
+fun main(){
+    val programeri=listOf(
+        BackendDeveloper("Amila","Residovic",2,"BH",listOf("Kotlin","Java"),"Spring Boot"),
+        BackendDeveloper("Emina","Jusufovic",5,"BH",listOf("Kotlin","Python"),"Spring Boot"),
+        BackendDeveloper("Amina","Hasic",3,"DE",listOf("Java","Python"),"Ktor"),
+        FrontendDeveloper("Ajla","Arnaut",4,"HR",listOf("JavaScript","TypeScript"),"React"),
+        FrontendDeveloper("Maid","Idrizovic",6,"BH",listOf("JavaScript","HTML"),"Vue.js")
+    )
 
+    println("Validacija podataka")
+    try{
+        Programer("","Residovic",5,"BH",listOf("Kotlin"))
+    }
+    catch(e: Exception){
+        println("Provjera 1: ${e.message}")
+    }
+    try{
+        Programer("Ajla","Arnaut",-5,"BH",listOf("Kotlin"))
+    }
+    catch(e: Exception){
+        println("Provjera 2: ${e.message}")
+    }
+    try{
+        Programer("Emina","Jusufovic",5,"BH",listOf())
+    }
+    catch(e: Exception){
+        println("Provjera 3: ${e.message}")
+    }
+    println()
+
+    println("Prikaz svih programera")
+    for(i in programeri){
+        println(ispis(i))
+    }
+    println()
+
+    println("Analiza jezika: Verzija 1")
+    val jezici1=analizaJezikaVerzija1(programeri)
+    for(i in jezici1.keys){
+        println("$i: ${jezici1[i]} programera")
+    }
+    println()
+
+    println("Analiza jezika: Verzija 2")
+    val jezici2=analizaJezikaVerzija2(programeri)
+    for(i in jezici2.keys){
+        println("$i: ${jezici2[i]} programera")
+    }
+    println()
+
+    println("Prosjecno iskustvo: Verzija 1")
+    val iskustvo1=prosjecnoIskustvoVerzija1(programeri)
+    for(i in iskustvo1.keys){
+        println("$i: ${iskustvo1[i]} godina")
+    }
+    println()
+
+    println("Prosjecno iskustvo: Verzija 2")
+    val iskustvo2=prosjecnoIskustvoVerzija2(programeri)
+    for(i in iskustvo2.keys){
+        println("$i: ${iskustvo2[i]} godina")
+    }
+    println()
+
+    println("Filtriranje za Spring Boot")
+    val filter=filtriranje(programeri,"Spring Boot")
+    for(i in filter){
+        println(ispis(i))
+    }
+
+}
 
 
 
