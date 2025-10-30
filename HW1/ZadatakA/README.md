@@ -13,7 +13,7 @@ getImePrezime() vraća puno ime osobe, getZemlja() vraća oznaku zemlje.
 
 **_Klasa Programer:_**:osnovna klasa koja implementira interface Osoba i sadrži:     
 _`Osnovni podaci`_: ime, prezime, godine iskustva, oznaka zemlje, programski jezici  
-`Validacija podatka`: u init bloku se provjerava da ime ne smije biti prazno, 
+`Validacija podatka`: u init bloku se provjerava da ime ne smije biti prazno,
 broj godina ne smije biti negativan i lista jezika ne smije biti prazna  
 `Normalizacija jezika`: svi nazivi se pretvaraju u mala slova uz lowercase()
 
@@ -52,10 +52,10 @@ Ako je objekat BackendDeveloper i njegov backendFramework odgovara traženom, ta
 Isto važi i za FrontendDeveloper.
 Funkcija vraća listu svih programera koji koriste određeni framework.
 
-**4. Ispis** 
+**4. Ispis**
 
 Za ispis podataka koristi se if/else uslov kako bi se provjerilo da li je backend ili frontend developer,
-i na osnovu toga ispisuje se tekst koji sadrži ime i prezime, listu programskih jezika 
+i na osnovu toga ispisuje se tekst koji sadrži ime i prezime, listu programskih jezika
 i framework koji koristi.
 
 **5. Uporedna analiza pristupa**
@@ -66,7 +66,7 @@ i framework koji koristi.
 
 **6. Upotreba AI alata**
 
-Koristila sam ChatGPT za razumijevanje kako kreirati parove podataka 
+Koristila sam ChatGPT za razumijevanje kako kreirati parove podataka
 i kako koristiti mapValues sa average() za računanje prosjeka iz grupiranih podataka.
 
 
@@ -98,7 +98,7 @@ java: 2 programera
 python: 2 programera  
 javascript: 2 programera  
 typescript: 1 programera  
-html: 1 programera 
+html: 1 programera
 
 `Prosjecno iskustvo: Verzija 1`  
 kotlin: 3.5 godina  
@@ -106,7 +106,7 @@ java: 2.5 godina
 python: 4.0 godina  
 javascript: 5.0 godina  
 typescript: 4.0 godina  
-html: 6.0 godina  
+html: 6.0 godina
 
 `Prosjecno iskustvo: Verzija 2`  
 kotlin: 3.5 godina  
@@ -114,7 +114,7 @@ java: 2.5 godina
 python: 4.0 godina  
 javascript: 5.0 godina  
 typescript: 4.0 godina  
-html: 6.0 godina  
+html: 6.0 godina
 
 `Filtriranje za Spring Boot`  
 Amila Residovic - Backend developer - jezici: kotlin, java - framework: Spring Boot  
