@@ -67,7 +67,9 @@ i framework koji koristi.
 **6. Upotreba AI alata**
 
 Koristila sam ChatGPT za razumijevanje kako kreirati parove podataka
-i kako koristiti mapValues sa average() za računanje prosjeka iz grupiranih podataka.
+i kako koristiti mapValues sa average() za računanje prosjeka iz grupiranih podataka.  
+Prompt koji sam koristila: Kako mogu u kotlinu povezati svaki programski jezik sa godinama iskustva programera
+i nakon grupisanja izračunati prosjek?
 
 
 **7. Primjeri rezultata programa**
