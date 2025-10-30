@@ -73,5 +73,40 @@ fun prosjecnoIskustvoVerzija2(programeri:List<Programer>):Map<String,Double> {
     return prosjek
 }
 
+fun filtriranje(programeri: List<Programer>,framework:String):List<Programer>{
+    val lista=mutableListOf<Programer>()
+
+    for(i in programeri){
+        if(i is BackendDeveloper){
+            if(i.backendFramework==framework){
+                lista.add(i)
+            }
+        }
+        if(i is FrontendDeveloper){
+            if(i.frontendFramework==framework){
+                lista.add(i)
+            }
+        }
+    }
+    return lista
+}
+
+fun ispis(programer:Programer):String{
+    val imePrezime=programer.getImePrezime()
+    val jezici=programer.jezici.joinToString (", ")
+
+    if(programer is BackendDeveloper){
+        return "$imePrezime - Backend developer - jezici: $jezici - framework: ${programer.backendFramework}"
+
+    }
+    else if(programer is FrontendDeveloper){
+        return "$imePrezime - Frontend developer - jezici: $jezici - framework: ${programer.frontendFramework}"
+    }
+    else{
+        return "Nepoznato"
+    }
+}
+
+
 
 
