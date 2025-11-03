@@ -72,6 +72,29 @@ fun prosjecnoIskustvoVerzija2(programeri:List<Programer>):Map<String,Double> {
     }
     return prosjek
 }
+fun mostExperiencedByLanguage(programeri:List<Programer>):Map<String,String>{
+    return programeri.flatMap{i->i.jezici.map{it to i.godineIskustva}}
+        .groupBy{it.first}.mapValues{it.value.maxBy{j->j.godineIskustva}}
+}
+
+fun mostExperiencedByLanguage(programeri:List<Programer>):Map<String,String>{
+    val mapa=mutableMapOf<String,Int>()
+    for(i in programeri){
+        for(j in i.jezici){
+            val temp=mapa[j]
+            if(j.godineIskustva>temp.godineIskustva){
+                mapa[j]=j
+            }
+        }
+    }
+    val rez=mutableMapOf<String,String>
+    for(i in mapa.keys){
+        rez[i]=rez.getorDefault(i,"")+getImePrezime()
+
+    }
+
+}
+
 
 fun filtriranje(programeri: List<Programer>,framework:String):List<Programer>{
     val lista=mutableListOf<Programer>()
@@ -175,6 +198,7 @@ fun main(){
     for(i in filter){
         println(ispis(i))
     }
+
 
 }
 

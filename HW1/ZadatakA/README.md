@@ -62,7 +62,7 @@ i framework koji koristi.
 
 * Verzija 1: Kraći i čitljiviji kod, manje mogućnosti za greške, ali može biti teže za razumijevanje
 
-* Verzija 2: Eksplicitna kontrola toka, lakše je pratiti korak po korak, ali je mana što ima više koda
+* Verzija 2: Eksplicitna kontrola toka, lakše je pratiti korak po korak, ali je mana što ima više koda.
 
 **6. Upotreba AI alata**
 
